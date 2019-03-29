@@ -1,0 +1,119 @@
+Types of variables
+In Java, there are three types of variables:
+
+Local Variables
+Instance Variables
+Static Variables
+1) Local Variables
+Local Variables are a variable that are declared inside the body of a method.
+
+2) Instance Variables
+Instance variables are defined without the STATIC keyword .They are defined Outside a method declaration. They are Object specific and are known as instance variables.
+
+
+3) Static Variables
+Static variables are initialized only once, at the start of the program execution. These variables should be initialized first, before the initialization of any instance variables.
+
+Example: Types of Variables in Java
+class Guru99 {
+    int data = 99; //instance variable  
+    static int a = 1; //static variable  
+    void method() {
+        int b = 90; //local variable  
+    }
+}
+Data Types in Java
+Data types classify the different values to be stored in the variable. In java, there are two types of data types:
+
+Primitive Data Types
+Non-primitive Data Types
+Java Data Types
+
+Primitive Data Types
+Primitive Data Types are predefined and available within the Java language. Primitive values do not share state with other primitive values.
+
+There are 8 primitive types: byte, short, int, long, char, float, double, and boolean Integer data types
+
+byte (1 byte)
+short (2 bytes)
+int (4 bytes)
+long (8 bytes)
+Java Variables and Data Types
+
+Floating Data Type
+
+float (4 bytes)
+
+double (8 bytes)
+Textual Data Type
+
+char (2 bytes)
+Logical
+
+boolean (1 byte) (true/false)
+
+Java Data Types
+Data Type	Default Value	Default size
+byte	0	1 byte
+short	0	2 bytes
+int	0	4 bytes
+long	0L	8 bytes
+float	0.0f	4 bytes
+double	0.0d	8 bytes
+boolean	false	1 bit
+char	'\u0000'	2 bytes
+Points to Remember:
+
+All numeric data types are signed(+/-).
+The size of data types remain the same on all platforms (standardized)
+char data type in Java is 2 bytes because it uses UNICODE character set. By virtue of it, Java supports internationalization. UNICODE is a character set which covers all known scripts and language in the world
+Java Variable Type Conversion & Type Casting
+A variable of one type can receive the value of another type. Here there are 2 cases -
+
+Case 1) Variable of smaller capacity is be assigned to another variable of bigger capacity.
+ 
+
+Java Variables and Data Types
+
+This process is Automatic, and non-explicit is known as Conversion
+
+Case 2) Variable of larger capacity is be assigned to another variable of smaller capacity
+ 
+
+Java Variables and Data Types
+
+In such cases, you have to explicitly specify the type cast operator. This process is known as Type Casting.
+
+In case, you do not specify a type cast operator; the compiler gives an error. Since this rule is enforced by the compiler, it makes the programmer aware that the conversion he is about to do may cause some loss in data and prevents accidental losses.
+
+Example: To Understand Type Casting
+
+Step 1) Copy the following code into an editor.
+
+class Demo {
+ public static void main(String args[]) {
+  byte x;
+  int a = 270;
+  double b = 128.128;
+  System.out.println("int converted to byte");
+  x = (byte) a;
+  System.out.println("a and x " + a + " " + x);
+  System.out.println("double converted to int");
+  a = (int) b;
+  System.out.println("b and a " + b + " " + a);
+  System.out.println("\ndouble converted to byte");
+  x = (byte)b;
+  System.out.println("b and x " + b + " " + x);
+ }
+}
+Step 2) Save, Compile & Run the code.
+
+Output:
+
+int converted to byte
+a and x 270 14
+double converted to int
+b and a 128.128 128
+
+double converted to byte
+b and x 128.128 -128
